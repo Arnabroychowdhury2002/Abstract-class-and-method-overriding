@@ -1,0 +1,39 @@
+abstract class Triangle {
+    // Abstract method to determine the type of triangle
+    abstract void type_of_triangle();
+}
+
+class EquilateralTriangle extends Triangle {
+    @Override
+    void type_of_triangle() {
+        System.out.println("Equilateral Triangle: 3 sides are equal");
+    }
+}
+
+class IsoscelesTriangle extends Triangle {
+    @Override
+    void type_of_triangle() {
+        System.out.println("Isosceles Triangle: 2 sides are equal");
+    }
+}
+
+class ScaleneTriangle extends Triangle {
+    @Override
+    void type_of_triangle() {
+        System.out.println("Scalene Triangle: 3 sides are different");
+    }
+}
+
+public class TriangleDemo {
+    public static void main(String[] args) {
+        // Creating objects of the three triangle classes
+        EquilateralTriangle equilateralTriangle = new EquilateralTriangle();
+        IsoscelesTriangle isoscelesTriangle = new IsoscelesTriangle();
+        ScaleneTriangle scaleneTriangle = new ScaleneTriangle();
+
+        // Invoking the type_of_triangle method for each type of triangle
+        equilateralTriangle.type_of_triangle();
+        isoscelesTriangle.type_of_triangle();
+        scaleneTriangle.type_of_triangle();
+    }
+}
